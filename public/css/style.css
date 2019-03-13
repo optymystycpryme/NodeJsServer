@@ -1,4 +1,5 @@
 body {
+  height: 100%;
   font: 15px/1.5 Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
@@ -26,11 +27,11 @@ textarea {
   border-radius: 5px;
 }
 .button_1 {
-  height: 38px;
+  height: 36px;
   background: #00f9ff;
   border: none;
   border-radius: 5px;
-  padding: 0 20px 0 20px;
+  padding: 2px 20px 0 20px;
   color: #000;
   font-size: 12px;
   margin: auto;
@@ -53,7 +54,7 @@ textarea {
 
 /*Header */
 header {
-  background: #35424a;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #ffffff;
   padding: 30px 0 0 0;
   min-height: 70px;
@@ -93,7 +94,7 @@ header .current a {
 }
 
 header a:hover {
-  color: #cccccc;
+  color: #f4b642;
   font-weight: bold;
 }
 
@@ -119,10 +120,22 @@ header a:hover {
   font-size: 20px;
 }
 
+.intro-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s all ease-in-out;
+}
+
+.intro-appear {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
 #newsletter {
   padding: 15px;
   background: #35424a;
   color: #fff;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.3);
 }
 
 #newsletter h1 {
@@ -142,7 +155,7 @@ header a:hover {
 
 #boxes {
   margin: 20px 0 0 0;
-  background: linear-gradient(#f9f9f9, #ccc, #ccc, #f9f9f9);
+  background: #f9f9f9;
 }
 
 #boxes .box {
@@ -150,29 +163,31 @@ header a:hover {
   text-align: center;
   width: 30%;
   padding: 10px;
+  padding-top: 20px;
 }
 
 #boxes .box img {
   width: 130px;
+  transition-property: transform;
+  transition-duration: 1s;
 }
 #boxes .box #cssLogo {
   width: 90px;
+  transition-property: transform;
+  transition-duration: 1s;
 }
 #boxes .box #alienLogo {
   width: 110px;
+  transition-property: transform;
+  transition-duration: 1s;
 }
 
 img:hover {
-  padding-top: 25px;
-  transform: scale(1.05);
+  transform: scale(1.3);
 }
 
 .altPagesHeader {
-  background: #009bb8;
-  color: #35424a;
-}
-
-.altPagesHeader a {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #35424a;
 }
 
@@ -195,11 +210,6 @@ aside#sidebar .quote textarea {
   padding: 5px;
 }
 
-aside div:hover {
-  background: #666;
-  border: #35424c 2px solid;
-}
-
 /* Services */
 ul#services li {
   list-style: none;
@@ -219,7 +229,7 @@ footer {
   padding: 20px;
   margin: 20px 0 0 0;
   color: #ffffff;
-  background-color: #009bb8;
+  background: linear-gradient(to right, #fff, #2c5364 50%);
   text-align: center;
 }
 
